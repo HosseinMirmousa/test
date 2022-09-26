@@ -1,0 +1,144 @@
+@import url('https://fonts.googleapis.com/css?family=Montserrat&display=swap');
+// @import url('https://fonts.googleapis.com/css?family=Montserrat:700&display=swap');
+@import url('./transitions.scss');
+
+nav {
+  z-index: 2020 !important;
+}
+.v-application {
+  font-family: 'Montserrat', sans-serif !important;
+}
+.caption {
+  font-family: 'Montserrat', sans-serif !important;
+}
+.v-application--wrap {
+  height: 100vh;
+  height: calc(var(--vh, 1vh) * 100) !important;
+  // height: calc(100vh - env(safe-area-inset-top, 66px)) !important;
+  max-height: 100vh !important;
+  max-height: calc(var(--vh, 1vh) * 100) !important;
+  // max-height: calc(100vh - env(safe-area-inset-top, 66px)) !important;
+  min-height: 100vh !important;
+  min-height: calc(var(--vh, 1vh) * 100) !important;
+  // min-height: calc(100vh - env(safe-area-inset-top, 66px)) !important;
+}
+.v-dialog__content {
+  // z-index: 2020 !important;
+}
+.v-slider__tick {
+  border-radius: 50% !important;
+}
+.v-btn:not(.v-btn--text):not(.v-btn--outlined):focus:before {
+  opacity: 0 !important;
+}
+
+// MarkerCLuster Fix
+
+.marker-cluster {
+  background-clip: padding-box;
+  border-radius: 20px;
+}
+.marker-cluster div {
+  width: 30px;
+  height: 30px;
+  margin-left: 5px;
+  margin-top: 5px;
+  text-align: center;
+  border-radius: 15px;
+  font: 12px 'Helvetica Neue', Arial, Helvetica, sans-serif;
+}
+.marker-cluster span {
+  line-height: 30px;
+}
+
+.leaflet-cluster-anim .leaflet-marker-icon,
+.leaflet-cluster-anim .leaflet-marker-shadow {
+  -webkit-transition: -webkit-transform 0.3s ease-out, opacity 0.3s ease-in;
+  -moz-transition: -moz-transform 0.3s ease-out, opacity 0.3s ease-in;
+  -o-transition: -o-transform 0.3s ease-out, opacity 0.3s ease-in;
+  transition: transform 0.3s ease-out, opacity 0.3s ease-in;
+}
+
+.leaflet-cluster-spider-leg {
+  /* stroke-dashoffset (duration and function) should match with leaflet-marker-icon transform in order to track it exactly */
+  -webkit-transition: -webkit-stroke-dashoffset 0.3s ease-out,
+    -webkit-stroke-opacity 0.3s ease-in;
+  -moz-transition: -moz-stroke-dashoffset 0.3s ease-out,
+    -moz-stroke-opacity 0.3s ease-in;
+  -o-transition: -o-stroke-dashoffset 0.3s ease-out,
+    -o-stroke-opacity 0.3s ease-in;
+  transition: stroke-dashoffset 0.3s ease-out, stroke-opacity 0.3s ease-in;
+}
+
+.botom-btn {
+  padding-top: 50px;
+  padding-bottom: 83px;
+}
+.fill-height {
+  height: 100% !important;
+}
+
+.v-slider__thumb {
+  width: 20px !important;
+  height: 20px !important;
+  left: -10px !important;
+  background: rgb(189, 189, 189) !important;
+  &::before {
+    // display: none;
+    top: -8px !important;
+    left: -8px !important;
+  }
+}
+.v-slider__tick--filled {
+  background-color: #ff473a !important;
+}
+.v-input--selection-controls
+  .v-input--selection-controls__input:hover
+  .v-input--selection-controls__ripple:before {
+  transform: scale(0) !important;
+}
+.theme--light.v-list-item:hover::before {
+  opacity: 0 !important;
+}
+.v-navigation-drawer .v-list {
+  background: inherit !important;
+}
+
+.secure input {
+  -webkit-text-security: disc;
+}
+.f-18 {
+  font-size: 18px;
+}
+// .v-menu__content.theme--light.menuable__content__active.v-autocomplete__content {
+//   top: 68px !important;
+// }
+
+input[type='number'] {
+  -moz-appearance: textfield;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+}
+
+.gm-style {
+  iframe + div {
+    display: none;
+    z-index: 0 !important;
+  }
+}
+
+.always_white {
+  .error--text {
+    color: white !important;
+    caret-color: white !important;
+  }
+  .v-input__control > .v-input__slot {
+    &::before,
+    &::after {
+      border-color: rgba(255, 255, 255, 0.7) !important;
+    }
+  }
+}
